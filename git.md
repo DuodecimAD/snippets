@@ -32,7 +32,7 @@ git push origin --delete branchName
 // clone only the branch
 git clone --branch branchName gitadress
 
-// add extra remote to push to 2 remote in 1 push
+// dealing with remote push
 git remote -v
-git remote set-url --add --push origin git@git.address
-git remote set-url --add --push origin git@github.com:address
+git remote set-url --add --push origin <url>
+git remote set-url --delete --push origin <url>

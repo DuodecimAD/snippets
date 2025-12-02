@@ -1,25 +1,38 @@
-## Git snippets
+// revert all changes before getting update
+git fetch
+git reset --hard origin/branchName
+git pull
 
-### Revert all changes before getting update
-	git fetch  
-	git reset --hard origin/branchName  
-	git pull
+// check all branches
+git branch -a
 
-### Stash my changes to a new branch
-	git stash  
-	git checkout -b newBranchName  
-	it stash pop
+// stash my changes to a new branch
+git stash
+git checkout -b newBranchName
+git stash pop
 
-### Move around branches
-	git checkout branchName
+// move around branches
+git checkout branchName
 
-### Pull branch only
-	git pull --branch branchName
+// pull branch only
+git pull --branch branchName
 
-### Clone only the branch
-	git clone --branch branchName git@git.
+// merge branch
+git checkout main
+git pull
+git merge branchName
 
-### Add extra remote to push to 2 remote in 1 push
-	git remote -v  
-	git remote set-url --add --push origin git@git.  
-	git remote set-url --add --push origin git@github.com:
+// delete branch locally
+git branch -d branchName
+git branch -D branchName // force
+
+// delete branch remote 
+git push origin --delete branchName
+
+// clone only the branch
+git clone --branch branchName gitadress
+
+// add extra remote to push to 2 remote in 1 push
+git remote -v
+git remote set-url --add --push origin git@git.address
+git remote set-url --add --push origin git@github.com:address
